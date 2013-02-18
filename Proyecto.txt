@@ -1,0 +1,106 @@
+FRIDGE JOKES
+
+Inspirado en todos los chistes sobre la nevera de la casa Dojima en Persona 4, que se van añadiendo como comentarios en este vídeo: http://www.youtube.com/watch?v=fdtJYmDAZPI
+
+Los publicaré todos y dejaré un formulario para subir más, los cuales serán moderados por mí o por cualquier humano. (Podría añadir moderación anónima si supone mucho trabajo, o si con @homerunchan no basta)
+Cada chiste podrá recibir valoración (<3, +1 y -1) por parte de usuarios registrados, o +1 de anónimos (guardándose sesión por cookie).
+
+Si marcha bien: etiquetas votables (estilo Kongregate).
+
+Páginas:
+- view. Si no se ha aplicado ningún filtro, un chiste aleatorio. Proporcionalmente grande (HTML5), imitando al videojuego. Incluirá controles de valoración y re-chistes / followups.
+--- Cargará hasta 10 chistes en memoria mediante Javascript / AJAX. Al haber leído la mitad, buscará los siguientes 10. Al haber leído tantos, borrará los primeros de memoria.
+- send. Campos: usuario, chiste, spoiler (solo para quienes hayan jugado por completo a P4 y P3), control para humanos.
+- filter. Se podrá ordenar por valoración, popularidad, tiempo y usuario, buscar por contenido y filtrar con o sin spoiler. Esta página saldrá como div emergente.
+- login. Div emergente.
+- admin. 
+- moderate. Los chistes enviados paran primero aquí para aprobarlos. Por ahora solo podrán entrar usuarios autorizados por el administrador. Según opciones requerirá uno o más votos para ser publicado.
+- profile. Div emergente sobre un usuario registrado.
+- signup. Simple. Podría probar con las APIs de OpenID, Facebook y Twitter.
+- faq.
+
+Tablas:
+- jokes. joke_ID, status, text, submitter, timestamp, spoiler, last_edit_by, views, dislikes, loves, likes_total, likes_anon, last_like_anon, followup_ID
+--- status = pending, visible, removed.
+--- submitter = nombre entero (anónimo) o ID de usuario.
+--- followup_ID = chiste al cual responde.
+--- last_like_anon = ningún anónimo podrá marcarlo de nuevo durante un tiempo determinado.
+- users. user_ID, username, password, email, status, login_type, first_signup, last_login, see_spoilers, location, bio, website, jokes_read, social, last_social_read, power, see_dislikes
+--- status = allowed, blocked, removed.
+--- social = aumentará al cometer acciones o pasar tiempo en la página. Se mostrará como Social Link Rank (con la nevera). Se podría inventar una historia personal, y todo.
+--- power = -1 invitado, 0 usuario, 1 moderador, 2 administrador, 3 súper-administrador.
+- loves. user_ID, joke_ID, timestamp
+- likes. user_ID, joke_ID, timestamp
+- dislikes. user_ID, joke_ID, timestamp
+- moderate. user_ID, joke_ID, timestamp, action
+--- action = 1, -1
+- notifications. notification_ID, user_ID, user2_ID, joke_ID, type, text.
+
+IgorAdmin   velvetwaver
+
+Social Link:
+Rango máximo: 10.
+Leer un chiste (idealmente si pasan más de 5 segundos). +1
+Enviar un followup o un chiste ajeno (previamente aprobado). +20
+Enviar un chiste propio (previamente aprobado). +50
+El chiste enviado ya existía (acción de moderadores). +2
+Votar like, dislike o love a un chiste ajeno. +1
+Deshacer voto. -1
+Recibir un like de uno de sus chistes propios. +4
+Llenar su perfil por primera vez. +20
+Como moderador, uno de los chistes que aprobó ha sido publicado. +5
+Enviar una sugerencia (idealmente no repetida y con más de 10 palabras). +2
+
+
+Banda sonora (extendidas):
+Signs of Love
+Alone
+Heartbeat Heartbreak
+Specialist
+(dormitorio de P3)
+
+Ruta:
+Inicio de sesión mediante OAuth 2. http://www.phpclasses.org/package/7700-PHP-Authorize-and-access-APIs-using-OAuth.html
+Opción para basarse en credenciales de Twitter, Facebook y Google.
+Cambio de página basado en # de la url. (Seguramente deberé emplear un plugin para jQuery)
+...
+
+Bugs:
+La orden user_actions_effect(1) se ejecuta dos veces.
+¿No se guardan las settings de Administrador? D-:<
+¿Por qué font-style: italic no funciona?
+...
+
+
+ToDo:
+<<< PHP usuario
+Para usuario registrado: empezar la música por una pista aleatoria.
+Algún sistema de control anti-bots.
+En el perfil, añadir http:// si su URL no lo contiene.
+
+
+<<< PHP administración
+settings para moderadores.
+Administración de usuarios.
+Opción para limpiar registros de moderación de chistes ya publicados o eliminados.
+
+
+
+<<< Javascript, jQuery, AJAX
+Regular la anchura del DIV de chistes al redimensionar la ventana del navegador. (Si con CSS no consigo nada apropiado)
+Aviso en settings "no ha guardado los cambios" después de pulsar alguna tecla.
+Modular funciones Javascript, para dejarlas accesibles desde cualquier página.
+
+
+<<< HTML5+CSS3
+Fecha y "hora" en la esquina superior derecha.
+
+
+<<< ¿AJAX?
+Botones para compartir en redes sociales.
+
+
+<<< Si la web se vuelve popular
+Social Link. Decidir sumas para el resto de acciones.
+Corrector automático de estilo. ">", eliminar etiquetas HTML, etc.
+Precargar chistes.

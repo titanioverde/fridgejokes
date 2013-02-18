@@ -1,0 +1,6 @@
+//General settings for Fridge Jokes.
+test=cooooool!
+test2=not so cool
+max_moderation_votes=3
+max_anon_likes=20
+cooldown_anon_likes=60
