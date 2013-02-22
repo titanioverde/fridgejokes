@@ -1,0 +1,4 @@
+24/12/2012 05:23:45 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IN (SELECT joke_ID FROM dislikes WHERE user_ID = 1) AND (followup_ID = '0' OR fo' at line 1
+24/12/2012 05:23:45 - SELECT * FROM jokes WHERE status = 'A' AND NOT IN (SELECT joke_ID FROM dislikes WHERE user_ID = 1) AND (followup_ID = '0' OR followup_ID IS NULL) ORDER BY RAND() LIMIT 1;
+27/12/2012 03:36:15 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'IN (SELECT joke_ID FROM dislikes WHERE user_ID = '') AND (followup_ID = '0' OR f' at line 1
+27/12/2012 03:36:15 - SELECT * FROM jokes WHERE status = 'A' AND NOT IN (SELECT joke_ID FROM dislikes WHERE user_ID = '') AND (followup_ID = '0' OR followup_ID IS NULL) ORDER BY RAND() LIMIT 1;

@@ -1,0 +1,71 @@
+17/09/2012 09:25:15 - Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+17/09/2012 09:25:15 - INSERT INTO jokes VALUES ('', 'P', '> You opened the fridge.
+> You see a potato chip inside.', 'Jarl', '1347899115', '0')
+17/09/2012 09:27:25 - Column count doesn't match value count at row 1
+17/09/2012 09:27:25 - INSERT INTO jokes VALUES ('', 'P', '> You opened the fridge.
+> drhgsdtghrtfg', 'asdf', '1347899245', '0')
+17/09/2012 09:29:22 - Column count doesn't match value count at row 1
+17/09/2012 09:29:22 - INSERT INTO jokes VALUES (status='P', text='> You opened the fridge.
+> dghdrtgbdf', submitter='asdf', timestamp='1347899362', spoiler='0')
+17/09/2012 10:37:38 - Column count doesn't match value count at row 1
+17/09/2012 10:37:38 - INSERT INTO jokes VALUES (status='P', text='> You opened the fridge.
+> dfgdfgbdfcfbgg', submitter='asdf', timestamp='1347903458', spoiler='0')
+17/09/2012 10:44:51 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''status', 'text', 'submitter', 'timestamp', 'spoiler') VALUES ('P', '> You open' at line 1
+17/09/2012 10:44:51 - INSERT INTO jokes ('status', 'text', 'submitter', 'timestamp', 'spoiler') VALUES ('P', '> You opened the fridge.
+> dfgdfgbdfcfbgg', 'asdf', '1347903891', '0')
+17/09/2012 10:49:08 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''status', 'text', 'submitter', 'timestamp', 'spoiler') VALUES ('P', '> You open' at line 1
+17/09/2012 10:49:08 - INSERT INTO jokes ('status', 'text', 'submitter', 'timestamp', 'spoiler') VALUES ('P', '> You opened the fridge.\r\n> dfgdfgbdfcfbgg', 'asdf', '1347904148', '0')
+17/09/2012 10:52:27 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2' at line 1
+17/09/2012 10:52:27 - SELECT * FROM jokes LIMIT 1 2;
+14/10/2012 05:12:24 - Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+14/10/2012 05:12:24 - SELECT * FROM users WHERE username='IgorAdmin';
+18/10/2012 12:22:24 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE status='A' LIMIT 1' at line 1
+18/10/2012 12:22:24 - SELECT * FROM jokes ORDER BY RAND() WHERE status='A' LIMIT 1;
+18/10/2012 12:24:30 - FUNCTION titanioverde_1f8.UNIXTIMESTAMP does not exist
+18/10/2012 12:24:30 - INSERT INTO moderate VALUES (joke_ID = 4, user_ID = 1, timestamp = UNIXTIMESTAMP(), action = 1);
+18/10/2012 12:32:32 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'joke_ID = 4, user_ID = 1, timestamp = UNIX_TIMESTAMP(), action = 1' at line 1
+18/10/2012 12:32:32 - INSERT INTO moderate VALUES joke_ID = 4, user_ID = 1, timestamp = UNIX_TIMESTAMP(), action = 1;
+18/10/2012 12:50:09 - Unknown column 'A' in 'field list'
+18/10/2012 12:50:09 - UPDATE jokes SET status = A WHERE joke_ID = 4;
+23/10/2012 11:24:59 - mysql_error
+23/10/2012 11:24:59 - SELECT text FROM jokes WHERE joke_ID = '2';
+23/10/2012 11:43:24 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(text = '>You opened the fridge.\r\n>You read an error message: 404. Food not fo' at line 1
+23/10/2012 11:43:24 - UPDATE jokes SET (text = '>You opened the fridge.\r\n>You read an error message: 404. Food not found.\r\n>You reboot the fridge.') WHERE joke_ID = '1';
+13/11/2012 07:07:54 - Query was empty
+13/11/2012 07:07:54 - 
+13/11/2012 07:11:09 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user_ID', 'joke_ID', 'timestamp') VALUES ('1', '1', UNIX_TIMESTAMP())' at line 1
+13/11/2012 07:11:09 - INSERT INTO likes ('user_ID', 'joke_ID', 'timestamp') VALUES ('1', '1', UNIX_TIMESTAMP());
+14/11/2012 12:29:19 - Query was empty
+14/11/2012 12:29:19 - 
+21/11/2012 12:53:30 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '('likes_anon', 'last_like_anon') VALUES ('likes_anon' + 1, UNIX_TIMESTAMP()) WHE' at line 1
+21/11/2012 12:53:30 - UPDATE jokes SET ('likes_anon', 'last_like_anon') VALUES ('likes_anon' + 1, UNIX_TIMESTAMP()) WHERE 'joke_ID' = '3';
+21/11/2012 12:54:19 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(likes_anon, last_like_anon) VALUES (likes_anon + 1, UNIX_TIMESTAMP()) WHERE 'jo' at line 1
+21/11/2012 12:54:19 - UPDATE jokes SET (likes_anon, last_like_anon) VALUES (likes_anon + 1, UNIX_TIMESTAMP()) WHERE 'joke_ID' = '3';
+27/11/2012 11:20:00 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'3\' AND status = \'A\'' at line 1
+27/11/2012 11:20:00 - SELECT joke_ID, submitter FROM jokes WHERE followup_ID = '3' AND status = 'A';
+27/11/2012 11:22:54 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'1\' AND status = \'A\'' at line 1
+27/11/2012 11:22:54 - SELECT joke_ID, submitter FROM jokes WHERE followup_ID = '1' AND status = 'A';
+27/12/2012 09:57:35 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't know how, but I got you phone, so call you maybe.', website = '' WHERE user_ID' at line 2
+27/12/2012 09:57:35 - UPDATE users SET email = 'marga@live.com', see_spoilers = '1', see_dislikes = '1',
+		location = 'Velvet Room', bio = 'I don't know how, but I got you phone, so call you maybe.', website = '' WHERE user_ID = '2';
+27/12/2012 10:06:57 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+27/12/2012 10:06:57 - SELECT * FROM jokes WHERE status='P' AND joke_ID NOT IN (SELECT joke_ID FROM moderate WHERE user_ID = 1) AND submitter NOT ;;
+27/12/2012 11:00:22 - Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+27/12/2012 11:00:22 - SELECT joke_ID FROM jokes WHERE text = 'jarl';
+02/01/2013 13:00:03 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') FROM users' at line 1
+02/01/2013 13:00:03 - SELECT COUNT() FROM users
+02/01/2013 13:01:31 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') FROM users' at line 1
+02/01/2013 13:01:31 - SELECT COUNT() FROM users
+07/01/2013 09:26:56 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''7' at line 1
+07/01/2013 09:26:56 - UPDATE users SET status = 'A' WHERE user_ID = '7;
+11/01/2013 12:51:27 - Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+11/01/2013 12:51:27 - SELECT COUNT(*) FROM users
+11/01/2013 12:52:14 - Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+11/01/2013 12:52:14 - SELECT COUNT(*) FROM users
+11/01/2013 12:55:38 - Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+11/01/2013 12:55:38 - SELECT COUNT(*) FROM users
+11/01/2013 12:57:03 - Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)
+11/01/2013 12:57:03 - SELECT COUNT(*) FROM users
+14/01/2013 11:18:25 - You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'location = 'Velvet Room', bio = 'I have a pretty big nose, I daresay.', website ' at line 2
+14/01/2013 11:18:25 - UPDATE users SET email = 'titanioverde@gmail.com', see_spoilers = '1', see_dislikes = '1', tune_player = '-1'
+		location = 'Velvet Room', bio = 'I have a pretty big nose, I daresay.', website = '' WHERE user_ID = '1';

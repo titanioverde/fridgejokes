@@ -49,9 +49,9 @@ echo "<div id='vote_menu' class='vote_div'>
         <table class='vote_table'>
             <tbody>
                 <tr>";
-echo "              <td class='like'><a id='like_link'><span class='vote_symbol'>+1</span> Like (<span class='sum' id='likes_sum'>0</span>)</a></td>
-                    <td class='dislike middle'><a id='dislike_link'><span class='vote_symbol'>-1</span> Dislike (<span class='sum' id='dislikes_sum'>0</span>)</a></td>
-                    <td class='love'><a id='love_link'><span class='vote_symbol'>&lt;3</span> Love! (<span class='sum' id='loves_sum'>0</span>)</a></td>
+echo "              <td class='like' id='like_link'><a><span class='vote_symbol'>+1</span> Like (<span class='sum' id='likes_sum'>0</span>)</a></td>
+                    <td class='dislike middle' id='dislike_link'><a><span class='vote_symbol'>-1</span> Dislike (<span class='sum' id='dislikes_sum'>0</span>)</a></td>
+                    <td class='love' id='love_link'><a><span class='vote_symbol'>&lt;3</span> Love! (<span class='sum' id='loves_sum'>0</span>)</a></td>
                 </tr>
             </tbody>
         </table>

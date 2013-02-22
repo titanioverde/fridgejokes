@@ -317,7 +317,7 @@ div.faq header {
     text-decoration: underline;
 }
 
-div.faq p {
+#shadow_faq p {
     text-align: justify;
     display: none;
 }

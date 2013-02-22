@@ -35,7 +35,7 @@ if ((isset($_GET['joke'])) && (isset($_GET['action']))) {
 				}
 				else {
 					$likes_query = "UPDATE jokes SET likes_anon = (likes_anon + 1), last_like_anon = UNIX_TIMESTAMP() WHERE joke_ID = '$joke_id';";
-					$message = "Vote submitted. Now you understand the world around you a bit better.";
+					$message = "Vote submitted.";
 					$result = "success";
 				}
 			}

@@ -14,8 +14,8 @@ $result = mysql_query($query);
 oh_my_error(mysql_error(), $query);
 
 while ($row = mysql_fetch_array($result)) {
-	echo "<header>".date("Y/m/d", $row['timestamp'])."</header>";
-	echo "<p><span class='miniwarning'>Category: ".$row['category']."</span><br />".$row['text']."</p>";
+	echo "<article>\n<header>".date("Y/m/d", $row['timestamp'])."</header>";
+	echo "<p><span class='miniwarning'>Category: ".$row['category']."</span><br />".$row['text']."</p>\n</article>";
 }
 
 mysql_free_result($result);
